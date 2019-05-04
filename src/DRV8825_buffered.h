@@ -15,10 +15,10 @@
 class DRV8825_buffered : public DRV8825 {
 
 private:
-    uint8_t *buffer;
+    uint16_t *buffer;
 
 public:
-    DRV8825_buffered(short steps, short dir_pin, short step_pin, short enable_pin, uint8_t *buffer);
+    DRV8825_buffered(short steps, short dir_pin, short step_pin, short enable_pin, uint16_t *buffer);
     void begin(float rpm=60, short microsteps=1);
     void stepStart();
     void stepFinish();

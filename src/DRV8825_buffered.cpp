@@ -10,10 +10,11 @@
 #include "DRV8825_buffered.h"
 
 
-DRV8825_buffered::DRV8825_buffered(short steps, short dir_pin, short step_pin, short enable_pin, uint8_t *buffer)
+DRV8825_buffered::DRV8825_buffered(short steps, short dir_pin, short step_pin, short enable_pin, uint16_t *buffer)
 :DRV8825(steps, dir_pin, step_pin, enable_pin)
 {
 	this->buffer = buffer;
+	this->enable_active_state = LOW;
 }
 
 /*
